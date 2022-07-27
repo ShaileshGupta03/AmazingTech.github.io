@@ -1,0 +1,184 @@
+<!-- 
+    npm install --save @ng-select/ng-select
+    npm i @ng-bootstrap/ng-bootstrap --force
+    npm install @popperjs/core
+    npm i angular-in-memory-web-api
+ -->
+
+<div class="card">
+    <h5 class="card-header text-light bg-danger">Registration Form</h5>
+    <div class="card-body">
+        <ul ngbNav #nav="ngbNav" class="nav-tabs" activeId="addtab" (navChange)="tabChange()">
+            <li ngbNavItem="addtab">
+                <a ngbNavLink>Add User</a>
+                <ng-template ngbNavContent>
+                    <form [formGroup]="addForm" (ngSubmit)="register()">
+                        <div class="row pt-3 ">
+                            <div class="row pb-3">
+                                <div class="form-group col">
+                                    <label for="">Title</label>
+                                    <select class="form-control" formControlName="title"
+                                        [ngClass]="{'is-invalid':submited && f['title'].errors}">
+                                        <option value="">--Select title--</option>
+                                        <option value="Mr">Mr</option>
+                                        <option value="Mrs">Mrs</option>
+                                        <option value="Miss">Miss</option>
+                                        <option value="Ms">Ms</option>
+                                    </select>
+                                    <div class="invalid-feedback" *ngIf="submited && f['title'].errors">
+                                        <div *ngIf="f['title'].errors['required']">
+                                            Title is required !!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-5">
+                                    <label for="">First Name</label>
+                                    <input type="text" class="form-control" formControlName="firstName"
+                                        [ngClass]="{'is-invalid':submited && f['firstName'].errors}">
+                                    <div class="invalid-feedback" *ngIf="submited && f['firstName'].errors">
+                                        <div *ngIf="f['firstName'].errors['required']">
+                                            firstName is required !!
+                                        </div>
+                                        <div *ngIf="f['firstName'].errors['minlength']">
+                                            first Name should be min 3 charactor !!
+                                        </div>
+                                        <div *ngIf="f['firstName'].errors['maxlength']">
+                                            first Name should be max 10 charactor !!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-5">
+                                    <label for="">Last Name</label>
+                                    <input type="text" class="form-control" formControlName="lastName"
+                                        [ngClass]="{'is-invalid':submited && f['lastName'].errors}">
+                                    <div class="invalid-feedback" *ngIf="submited && f['lastName'].errors">
+                                        <div *ngIf="f['lastName'].errors['required']">
+                                            lastName' is required !!
+                                        </div>
+                                        <div *ngIf="f['lastName'].errors['minlength']">
+                                            Last Name should be min 3 charactor !!
+                                        </div>
+                                        <div *ngIf="f['lastName'].errors['maxlength']">
+                                            Last Name should be max 10 charactor !!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pb-3">
+                                <div class="form-group col-5">
+                                    <label for="">Email</label>
+                                    <input type="email" class="form-control" formControlName="emailID"
+                                        [ngClass]="{'is-invalid':submited && f['emailID'].errors}">
+                                    <div class="invalid-feedback" *ngIf="submited && f['emailID'].errors">
+
+                                        <div *ngIf="f['emailID'].errors['required']">
+                                            Email is required !!
+                                        </div>
+                                        <div *ngIf="f['emailID'].errors['email']">
+                                            Email must be a valid email address !!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-5">
+                                    <label for="">Date of Birth</label>
+                                    <input type="date" class="form-control" formControlName="dob"
+                                        [ngClass]="{'is-invalid':submited && f['dob'].errors}">
+                                    <div class="invalid-feedback" *ngIf="submited && f['dob'].errors">
+                                        <div *ngIf="f['dob'].errors['required']">
+                                            Date of birth is required !!
+                                        </div>
+                                        <div *ngIf="f['dob'].errors['pattern']">
+                                            Date of birth must be a valid in the format YYYY-MM-DD !!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pb-3">
+                                <div class="form-group col-5">
+                                    <label for="">Password</label>
+                                    <input type="password" class="form-control" formControlName="password"
+                                        [ngClass]="{'is-invalid':submited && f['password'].errors}">
+                                    <div class="invalid-feedback" *ngIf="submited && f['password'].errors">
+                                        <div *ngIf="f['password'].errors['required']">
+                                            Password is Required !!
+                                        </div>
+                                        <div *ngIf="f['password'].errors['minlength']">
+                                            Password should be min 6 charactor !!
+                                        </div>
+                                        <div *ngIf="f['password'].errors['maxlength']">
+                                            Password should be max 10 charactor !!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-5">
+                                    <label for="">Confirm Password</label>
+                                    <input type="password" class="form-control" formControlName="confirmpassword"
+                                        [ngClass]="{'is-invalid':submited && f['confirmpassword'].errors}">
+                                    <div class="invalid-feedback" *ngIf="submited && f['confirmpassword'].errors">
+                                        <div *ngIf="f['confirmpassword'].errors['required']">
+                                            confirm password is Required !!
+                                        </div>
+                                        <div *ngIf="f['confirmpassword'].errors['mustMatch']">
+                                           Password and  confirm Password must be same !! 
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pb-3">
+                                <div class="form-group col from-check">
+                                    <input type="checkbox" class="from-check-input me-2" formControlName="acceptTerms"
+                                        [ngClass]="{'is-invalid':submited && f['acceptTerms'].errors}"style=" transform:scale(1.7);">
+                                    <label for="acceptTerms" class="form-check-lable ">Accept Terms & Conditions</label>
+                                    <div class="invalid-feedback" *ngIf="submited && f['acceptTerms'].errors">
+                                        <div *ngIf="f['acceptTerms'].errors['required']">
+                                            Accept Tetms & Conditions is Required !!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <button type="submit" class="btn btn-success me-2">{{buttonText}}</button>
+                                <button type="button" class="btn btn-danger mr-2" (click)="resetForm()">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </ng-template>
+            </li>
+            <li ngbNavItem="viewtab">
+                <a ngbNavLink class="font-weight-bold">Users List</a>
+                <ng-template ngbNavContent>
+                    <div class="from-row pt-3">
+                        <div class="form-group row">
+                            <table class="table table-bordered">
+                                <tr class="">
+                                    <!-- <th>Id</th> -->
+                                    <th>Title</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Email</th>
+                                    <th>DOB</th>
+                                    <th>Action</th>
+                                </tr>
+                                <tr *ngFor="let user of users">
+                                    <!-- <td>{{user.id}}</td> -->
+                                    <td>{{user.title}}</td>
+                                    <td>{{user.firstName}}</td>
+                                    <td>{{user.lastName}}</td>
+                                    <td>{{user.emailID}}</td>
+                                    <td>{{user.dob}}</td>
+                                    <td>
+                                        <i class="fa fa-edit text-success" (click)="edit(user.id)"></i>
+                                        <i class="fa fa-trash-o text-danger" (click)="delete(user.id)"></i>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+        </ul>
+
+        <div [ngbNavOutlet]="nav" class="mt-2"></div>
+    </div>
+</div>
