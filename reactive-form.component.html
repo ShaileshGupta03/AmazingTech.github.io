@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Trainee Community</title> 
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script> -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!--badhiya cdn hawe-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <div class="container-fluid m-4">
+        <h5 class="pt-2">  <i style='font-size:24px' class='fas fa-copy'></i>  Add Story</h5>
+        <div class="row-lg-12 row-cols-1 border-bottom"style="border-bottom: 1px solid ;border-redius-10px">
+            <!-- <div class="col-lg-8"> -->
+            <div class="card-group">
+                <div class="card col-lg-8 "
+                    style="border-top: 3px solid red;border-left: 1px solid burlywood;border-radius: 5px;">
+                    <h6 for="" class="p-2">Story Details</h6>
+                    <hr style="width: 1140px; width-left:20px;">
+
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <label for="">Story date</label>
+                            <div class="form-group ">
+                                <input type="Date" class="form-control form-control-lg" placeholder="Location"
+                                    name="location" value="2019-07-02T25:32Z" />
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mt-4">
+                            <div class="form-check  mt-4">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"style=" transform:scale(1.7);">
+                                <label class="form-check-label ml-2" for="defaultCheck1">
+                                    Old date story
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Synopsis</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                    placeholder="Description(maximum 50 character)"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Story Heading</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                                    placeholder="Story Heading (maximum 130 character)"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">URL</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                                    placeholder="URL in English (maximum 80 character)"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col ">
+                            <div class="form-group">
+                                <label for="">Story Author</label>
+                                <select class="form-control form-control-lg" name="status">
+                                    <option value="0">द सूत्र</option>
+                                    <option value="Developer">Developer</option>
+                                    <option value="Junior Developer">Junior Developer</option>
+                                    <option value="Senior Developer">Senior Developer</option>
+                                    <option value="Manager">Manager</option>
+                                    <option value="Student or Learning">Student or Learning</option>
+                                    <option value="Instructor">Instructor or Teacher</option>
+                                    <option value="Intern">Intern</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label for="">TAGS <label for="" style="color:red;">Seprated By Comma ","</label></label>
+
+                    <!-- <ng-select [items]="cars" bindLabel="name" placeholder="TAGS Seprated By Comma (First Tag Must in English)" appendTo="body" [multiple]="true" ></ng-select> -->
+
+                    <!-- <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"></span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                            aria-describedby="addon-wrapping">
+                    </div> -->
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-light"></span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"
+                            placeholder="TAGS Seprated By Comma (First Tag Must in English)">
+
+                        <div class="input-group-append">
+                            <span class="input-group-text  bg-light"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="">State</label>
+                                <select class="form-control form-control-lg" name="status">
+                                    <option value="0">--Select State--</option>
+                                    <option value="Developer">Developer</option>
+                                    <option value="Junior Developer">Junior Developer</option>
+                                    <option value="Senior Developer">Senior Developer</option>
+                                    <option value="Manager">Manager</option>
+                                    <option value="Student or Learning">Student or Learning</option>
+                                    <option value="Instructor">Instructor or Teacher</option>
+                                    <option value="Intern">Intern</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="">City</label>
+                                <select class="form-control form-control-lg" name="status">
+                                    <option value="0"></option>
+                                    <option value="Developer">Developer</option>
+                                    <option value="Junior Developer">Junior Developer</option>
+                                    <option value="Senior Developer">Senior Developer</option>
+                                    <option value="Manager">Manager</option>
+                                    <option value="Student or Learning">Student or Learning</option>
+                                    <option value="Instructor">Instructor or Teacher</option>
+                                    <option value="Intern">Intern</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card col-lg-4 ml-4"
+                    style="border-top: 3px solid red; border-left: 1px solid burlywood;border-radius: 5px;width: fixed;">
+                    <h6 for="" class="p-2"><b class="">Publish</b></h6>
+                    <hr style="width: 100%;">
+                    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                    <!-- <div class="card-body"> -->
+
+                    <div class="row ">
+                        <div class="col">
+                            <div class="card">
+                                <label class="card-header form-control-lg">Story Status</label>
+                                <div class="card-body p-4">
+                                    <div class=" form-check form-check-inline ">
+                                        <input class="form-check-input  text-primary" type="radio"
+                                            name="inlineRadioOptions" id="inlineRadio1" value="option1" style=" transform:scale(1.7);"/>
+                                        <label class="form-check-label ml-2" for="inlineRadio1">Active</label>
+                                    </div>
+                                    <div class="offset-2 form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio2" value="option2" style=" transform:scale(1.7);">
+                                        <label class="form-check-label ml-2" for="inlineRadio2">Deactive</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus quam corporis neque, ut natus ab facere. Itaque officia odit officiis neque assumenda quos vitae provident, ab, ea consequuntur soluta. -->
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col">
+                            <div class="card ">
+                                <label class="card-header form-control-lg">Story Type</label>
+                                <div class="card-body p-4">
+                                    <div class="form-check form-check-inline p-2 pb-4">
+                                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions"
+                                            id="inlineRadio1" value="option1" style=" transform:scale(1.7);">
+                                        <label class="form-check-label ml-2" for="inlineRadio1">Category Big Story</label>
+                                    </div>
+                                    <div class="form-check form-check-inline  pb-4">
+                                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions"
+                                            id="inlineRadio2" value="option2" style=" transform:scale(1.7);">
+                                        <label class="form-check-label ml-2" for="inlineRadio2">International News</label>
+                                    </div>
+                                    <div class="form-check form-check-inline p-2 pb-4">
+                                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions"
+                                            id="inlineRadio2" value="option2"style=" transform:scale(1.7);">
+                                        <label class="form-check-label ml-2" for="inlineRadio2">Exclusive News</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col">
+                            <div class="card ">
+                                <label class="card-header form-control-lg">Homepage Category</label>
+                                <div class="card-body">
+                                    <div class="form-check form-check-inline p-2 pb-4">
+                                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions"
+                                            id="inlineRadio1" value="option1" style=" transform:scale(1.7);">
+                                        <label class="form-check-label ml-2" for="inlineRadio1">Big Story</label>
+                                    </div>
+                                    <div class="form-check form-check-inline p-2 offset-2 pb-4">
+                                        <input class="form-check-input mr-2" type="checkbox" name="inlineRadioOptions"
+                                            id="inlineRadio2" value="option2" style=" transform:scale(1.7);">
+                                        <label class="form-check-label ml-2 " for="inlineRadio2">Homepage</label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col">
+                            <div class="card ">
+                                <label class="card-header form-control-lg">Notification</label>
+                                <div class="card-body">
+                                    <div class="form-check form-check-inline p-2 pb-4">
+                                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions"
+                                            id="inlineRadio1" value="option1" style=" transform:scale(1.7);">
+                                        <label class="form-check-label ml-2" for="inlineRadio1">Send Notificatio</label>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
